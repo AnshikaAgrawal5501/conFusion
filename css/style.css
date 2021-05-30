@@ -33,6 +33,13 @@ body {
     min-height: 300px;
 }
 
+#carouselButton {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
 .footer {
     background-color: #D1C4E9;
     margin: 0px auto;
