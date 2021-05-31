@@ -42,15 +42,15 @@
                 </ul>
 
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a class="login">
                         <i class="fas fa-sign-in-alt"></i> Login</a>
                 </span>
             </div>
         </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-md modal-dialog-centered" role="content">
+    <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="content">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -59,7 +59,6 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <!-- <div class="form-row"> -->
                         <div class="form-group col-12">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
                             <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
@@ -75,7 +74,6 @@
                                     </label>
                             </div>
                         </div>
-                        <!-- </div> -->
                         <div class="form-row">
                             <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
@@ -99,7 +97,7 @@
                             <img src="img/logo.png" class="img-fluid">
                         </div>
                         <div class="col-12 col-sm-6 align-self-center">
-                            <a data-toggle="modal" data-target="#reservation" class="btn btn-warning btn-block btn-sm">Reserve Table</a>
+                            <a class="btn btn-warning btn-block btn-sm reserve">Reserve Table</a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +106,7 @@
     </header>
 
     <div id="reservation" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="content">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -344,18 +342,27 @@
 
     <script>
         $(document).ready(function() {
+
+            $('.login').click(function() {
+                $('#login').modal('toggle');
+            });
+
+            $('.reserve').click(function() {
+                $('#reservation').modal('toggle');
+            });
+
             $("#mycarousel").carousel({
                 interval: 2000
             });
+
             $("#carousel-pause").click(function() {
                 $("#mycarousel").carousel('pause');
             });
+
             $("#carousel-play").click(function() {
                 $("#mycarousel").carousel('cycle');
             });
         });
-
-        // console.log(document.getElementById("carouselButton").children)
     </script>
 
 </body>

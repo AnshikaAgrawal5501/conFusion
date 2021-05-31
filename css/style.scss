@@ -64,3 +64,19 @@ body {
     bottom: 0px;
     z-index: 1;
 }
+
+#login,
+#reservation {
+    .modal-header {
+        background-color: $background-dark;
+        .modal-title {
+            color: white;
+        }
+        button {
+            color: $background-pale;
+        }
+    }
+    .modal-body {
+        background-color: $background-pale;
+    }
+}
